@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AsyncUnitOfWork.cs" />
+    <Compile Remove="IAsyncUnitOfWork.cs" />
+    <Compile Remove="Repositories\AsyncCustomerRepository.cs" />
+    <Compile Remove="Repositories\AsyncGenericGuidRepository.cs" />
+    <Compile Remove="Repositories\AsyncGenericRepository.cs" />
+    <Compile Remove="Repositories\AsyncOrderRepository.cs" />
+    <Compile Remove="Repositories\AsyncProductRepository.cs" />
+    <Compile Remove="Repositories\IAsyncKeyTypeRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop.Domain\MyShop.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
