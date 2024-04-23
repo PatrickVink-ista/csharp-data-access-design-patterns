@@ -40,7 +40,7 @@
                             <h6 class="my-0">{{ line.product.name }}</h6>
                             <small class="text-muted">Quantity: {{ line.quantity }}</small>
                         </div>
-                        <span class="text-muted">${{ line.product.price * line.quantity }}</span>
+                        <span class="text-muted">${{ (line.product.price * line.quantity).toLocaleString(undefined, { minimumFractionDigits: 2 }) }}</span>
                     </li>
 
                     <li class="list-group-item d-flex justify-content-between">
